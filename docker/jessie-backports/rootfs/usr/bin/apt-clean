@@ -1,7 +1,12 @@
 #!/bin/sh
 
+export LC_ALL=C
+export DEBIAN_FRONTEND=noninteractive
+
+echo "Cleaning up image"
+
 apt-get autoremove -y
 apt-get clean && apt-get autoclean
-rm -rf /usr/share/doc /usr/share/man /tmp/* /var/tmp/*
+rm -rf /tmp/* /var/tmp/*
 rm -rf /var/lib/apt/lists/*
 rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin

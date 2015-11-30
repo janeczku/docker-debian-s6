@@ -1,5 +1,8 @@
 #!/bin/sh
 
+export LC_ALL=C
+export DEBIAN_FRONTEND=noninteractive
+
 echo "Cleaning up image"
 
 apt-get autoremove -y
